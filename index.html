@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <script>
+      // Initialize the number and the production rate
+      var num = 0;
+      var rate = 1;
+      var joy = 0
+      
+      // Define a function to increase the number by the production rate every second
+      function increase() {
+        num += rate;
+        document.getElementById("num").innerHTML = num;
+      }
+      
+      // Define a function to spend 10 of the number to double the production rate
+      function spend() {
+        if (num >= 10) {
+          num -= 10;
+          rate *= 0.9;
+          joy
+          document.getElementById("num").innerHTML = num;
+          document.getElementById("rate").innerHTML = rate;
+        }
+      }
+      // Define a function to buy 11
+      function 11() {
+        if (joy >= 1) {
+          num -= 10;
+          rate *= 0.9;
+          joy += 1
+          document.getElementById("num").innerHTML = num;
+          document.getElementById("rate").innerHTML = rate;
+          document.getElementById("joy").innerHTML = joy;
+        }
+        else 
+      }
+
+// Set an interval to call the increase function every second
+setInterval(increase, 1000);
+      </script>
+    </head>
+<body>
+    <h1>Pain Simulator</h1>
+    <p>The current pain is: <span id="num">0</span></p>
+    <p>The current pain production rate is: <span id="rate">1</span> per second</p>
+    <button onclick="spend()">Spend 10 to get 1 joy point but slow down pain increasing rate (*0.9)</button>
+    <button onclick="11()">Get 2x more joy points (1 joy point)</button>
+  </body>
+</html>
