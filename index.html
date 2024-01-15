@@ -5,6 +5,7 @@
       var num = 0;
       var rate = 1;
       var joy = 0
+      var joyMult = 0
       
       // Define a function to increase the number by the production rate every second
       function increase() {
@@ -25,9 +26,8 @@
       // Define a function to buy 11
       function 11() {
         if (joy >= 1) {
-          num -= 10;
-          rate *= 0.9;
-          joy += 1
+          joyMult *= 2;
+          joy -= 1
           document.getElementById("num").innerHTML = num;
           document.getElementById("rate").innerHTML = rate;
           document.getElementById("joy").innerHTML = joy;
