@@ -18,7 +18,7 @@
       
       // Define a function to increase the number by the production rate every second
       function increase() {
-        num += rate;
+        num += round(rate);
         document.getElementById("num").innerHTML = num;
       }
       
@@ -40,6 +40,8 @@
           document.getElementById("num").innerHTML = num;
           document.getElementById("rate").innerHTML = rate;
           document.getElementById("joy").innerHTML = joy;
+          document.querySelector("input[class='11']").addAttribute("disabled");
+
         } 
       }
 
@@ -50,8 +52,9 @@
 <body>
     <h1>Pain Simulator</h1>
     <p>The current pain is: <span id="num">0</span></p>
-    <p>The current pain production rate is: <span id="rate">1</span> per second</p>
-    <button onclick="spend()">Spend 10 to get 1 joy point but slow down pain increasing rate (*0.9)</button>
+    <p>The current pain production rate is: <span id="rate"> </span> rounded per second</p>
+    <p>The current pain production rate is: <span id="rate"> </span> rounded per second</p>
+    <button class="11" onclick="spend()">Spend 10 to get 1 joy point but slow down pain increasing rate (*0.9) rounded </button>
     <button onclick="11()">Get 2x more joy points (1 joy point)</button>
   </body>
 </html>
