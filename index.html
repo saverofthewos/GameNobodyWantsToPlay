@@ -32,7 +32,7 @@
       
       // Define a function to increase the number by the production rate every second
       function increase() {
-        num += (rate);
+        num += rate;
         document.getElementById("num").innerHTML = num;
       }
       
@@ -60,7 +60,7 @@
       }
 
       // Set an interval to call the increase function every second
-      setInterval(increase, 1000);
+      setInterval(increase, 1);
       </script>
     </head>
 <body>
