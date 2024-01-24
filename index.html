@@ -8,6 +8,10 @@
           if (posthog.isFeatureEnabled('my-flag') ) {
           }
       })
+      posthog.init("api_key", {
+        "api_host": "https://app.posthog.com",
+        "opt_in_site_apps": true,
+      })
       //you can stop ignoring now
     </script>
     <style>
